@@ -1,0 +1,45 @@
+{
+  "resource": "Posts",
+  "http_method": "GET",
+  "route": "/api/posts",
+  "description": "GET posts",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/posts",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "[{\"id\":1,\"title\":\"Fugiat quia dolores quia et ad.\",\"content\":\"Est sunt ducimus eligendi id quam est velit. Minus vel autem magnam cupiditate voluptatum architecto. Incidunt ea dolore dignissimos eos. Sunt cupiditate animi ad quam.\",\"created_at\":\"2015-06-10T03:21:31.629Z\",\"updated_at\":\"2015-06-10T03:21:31.629Z\"},{\"id\":2,\"title\":\"Fugiat quia dolores quia et ad.\",\"content\":\"Est sunt ducimus eligendi id quam est velit. Minus vel autem magnam cupiditate voluptatum architecto. Incidunt ea dolore dignissimos eos. Sunt cupiditate animi ad quam.\",\"created_at\":\"2015-06-10T03:21:31.638Z\",\"updated_at\":\"2015-06-10T03:21:31.638Z\"}]",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"306e733bc1d1953babc9be53b978eb83\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "89678e2c-821e-4085-bc22-ad2039020adb",
+        "X-Runtime": "0.013620",
+        "Content-Length": "625"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

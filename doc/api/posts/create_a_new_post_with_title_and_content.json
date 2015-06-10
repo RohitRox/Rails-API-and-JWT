@@ -1,0 +1,57 @@
+{
+  "resource": "Posts",
+  "http_method": "POST",
+  "route": "api/posts",
+  "description": "Create a new post with title and content",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "post",
+      "name": "title",
+      "description": "Post title"
+    },
+    {
+      "required": false,
+      "scope": "post",
+      "name": "content",
+      "description": "Post Content"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "api/posts",
+      "request_body": "{\"post\":{\"title\":\"My Title\",\"content\":\"Some long long awesome content.\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"id\":1,\"title\":\"My Title\",\"content\":\"Some long long awesome content.\",\"created_at\":\"2015-06-10T03:21:31.698Z\",\"updated_at\":\"2015-06-10T03:21:31.698Z\"}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "/api/posts/1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d7b5de9df8cf7ae2137975c205b25fed\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "cde2f3ea-9a26-41fc-9412-a40e11fc1fbf",
+        "X-Runtime": "0.004932",
+        "Content-Length": "151"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
