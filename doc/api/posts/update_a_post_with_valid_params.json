@@ -1,21 +1,21 @@
 {
   "resource": "Posts",
-  "http_method": "POST",
-  "route": "api/posts",
-  "description": "Create a new post with title and content",
+  "http_method": "PUT",
+  "route": "/api/posts/:id",
+  "description": "Update a post with valid params",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "scope": "post",
       "name": "title",
-      "description": "Post title"
+      "description": "Post Title"
     },
     {
-      "required": false,
+      "required": true,
       "scope": "post",
       "name": "content",
-      "description": "Post Content"
+      "description": "Post Content(Min 25 chars)"
     }
   ],
   "response_fields": [
@@ -23,9 +23,9 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "api/posts",
-      "request_body": "{\"post\":{\"title\":\"My Title\",\"content\":\"Some long long awesome content.\"}}",
+      "request_method": "PUT",
+      "request_path": "/api/posts/1",
+      "request_body": "{\"post\":{\"title\":\"My New Title\",\"content\":\"Some long long awesome content.\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -35,20 +35,19 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"id\":1,\"title\":\"My Title\",\"content\":\"Some long long awesome content.\",\"created_at\":\"2015-06-10T03:21:31.698Z\",\"updated_at\":\"2015-06-10T03:21:31.698Z\"}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":1,\"title\":\"My New Title\",\"content\":\"Some long long awesome content.\"},\"response\":{\"code\":200},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Location": "/api/posts/1",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d7b5de9df8cf7ae2137975c205b25fed\"",
+        "ETag": "W/\"74967b4ccbef6294000347ef90ca027f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "cde2f3ea-9a26-41fc-9412-a40e11fc1fbf",
-        "X-Runtime": "0.004932",
-        "Content-Length": "151"
+        "X-Request-Id": "e5475e33-9ff1-422f-95fc-c87f256f2c39",
+        "X-Runtime": "0.006558",
+        "Content-Length": "158"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

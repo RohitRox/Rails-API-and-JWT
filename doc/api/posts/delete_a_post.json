@@ -1,0 +1,45 @@
+{
+  "resource": "Posts",
+  "http_method": "DELETE",
+  "route": "/api/posts/:id",
+  "description": "Delete a post",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/api/posts/1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"response\":{\"code\":204}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ac74fb0159d8224a1689d5eeeb10b55e\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0c6533e1-03e1-4dcd-8683-ac7b785518a0",
+        "X-Runtime": "0.016291",
+        "Content-Length": "25"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

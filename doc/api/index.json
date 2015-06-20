@@ -4,18 +4,33 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Create a new post with blank title",
-          "link": "posts/create_a_new_post_with_blank_title.json",
+          "description": "Create a new post with invalid title",
+          "link": "posts/create_a_new_post_with_invalid_title.json",
           "groups": "all"
         },
         {
-          "description": "Create a new post with title and content",
-          "link": "posts/create_a_new_post_with_title_and_content.json",
+          "description": "Create a new post with valid params",
+          "link": "posts/create_a_new_post_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Delete a post",
+          "link": "posts/delete_a_post.json",
           "groups": "all"
         },
         {
           "description": "Get posts",
           "link": "posts/get_posts.json",
+          "groups": "all"
+        },
+        {
+          "description": "Update a new post with invalid params",
+          "link": "posts/update_a_new_post_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Update a post with valid params",
+          "link": "posts/update_a_post_with_valid_params.json",
           "groups": "all"
         }
       ]

@@ -2,20 +2,20 @@
   "resource": "Posts",
   "http_method": "POST",
   "route": "api/posts",
-  "description": "Create a new post with blank title",
+  "description": "Create a new post with valid params",
   "explanation": null,
   "parameters": [
     {
       "required": true,
       "scope": "post",
       "name": "title",
-      "description": "Post title"
+      "description": "Post Title"
     },
     {
-      "required": false,
+      "required": true,
       "scope": "post",
       "name": "content",
-      "description": "Post Content"
+      "description": "Post Content(Min 25 chars)"
     }
   ],
   "response_fields": [
@@ -25,7 +25,7 @@
     {
       "request_method": "POST",
       "request_path": "api/posts",
-      "request_body": "{\"post\":{\"title\":\"\",\"content\":\"\"}}",
+      "request_body": "{\"post\":{\"title\":\"My Title\",\"content\":\"Some long long awesome content.\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -35,18 +35,19 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 422,
-      "response_status_text": "Unprocessable Entity",
-      "response_body": "{\"title\":[\"can't be blank\"]}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"data\":{\"id\":1,\"title\":\"My Title\",\"content\":\"Some long long awesome content.\"},\"response\":{\"code\":201},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-cache",
-        "X-Request-Id": "855d5815-d181-459c-acdb-03513904769a",
-        "X-Runtime": "0.028784",
-        "Content-Length": "28"
+        "ETag": "W/\"691eec56b0faf743df98c78c11330d81\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d46c8456-b50c-4505-971e-04fef10527c0",
+        "X-Runtime": "0.008210",
+        "Content-Length": "154"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

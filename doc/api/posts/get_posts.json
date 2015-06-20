@@ -2,10 +2,37 @@
   "resource": "Posts",
   "http_method": "GET",
   "route": "/api/posts",
-  "description": "GET posts",
+  "description": "Get posts",
   "explanation": null,
   "parameters": [
-
+    {
+      "required": true,
+      "default": 25,
+      "scope": "post",
+      "name": "per_page",
+      "description": "Per Page"
+    },
+    {
+      "required": false,
+      "default": 1,
+      "scope": "post",
+      "name": "page",
+      "description": "Page"
+    },
+    {
+      "required": false,
+      "default": "created_at",
+      "scope": "post",
+      "name": "sort",
+      "description": "Sort Column"
+    },
+    {
+      "required": false,
+      "default": "desc",
+      "scope": "post",
+      "name": "odrer",
+      "description": "Sort Order"
+    }
   ],
   "response_fields": [
 
@@ -26,17 +53,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[{\"id\":1,\"title\":\"Fugiat quia dolores quia et ad.\",\"content\":\"Est sunt ducimus eligendi id quam est velit. Minus vel autem magnam cupiditate voluptatum architecto. Incidunt ea dolore dignissimos eos. Sunt cupiditate animi ad quam.\",\"created_at\":\"2015-06-10T03:21:31.629Z\",\"updated_at\":\"2015-06-10T03:21:31.629Z\"},{\"id\":2,\"title\":\"Fugiat quia dolores quia et ad.\",\"content\":\"Est sunt ducimus eligendi id quam est velit. Minus vel autem magnam cupiditate voluptatum architecto. Incidunt ea dolore dignissimos eos. Sunt cupiditate animi ad quam.\",\"created_at\":\"2015-06-10T03:21:31.638Z\",\"updated_at\":\"2015-06-10T03:21:31.638Z\"}]",
+      "response_body": "{\"data\":[{\"id\":2,\"title\":\"Iure dolore omnis rerum est.\",\"content\":\"Vel alias quos magnam quisquam hic sit. Quaerat et non sit quas. Magni neque soluta sapiente iusto quod sed. Minus reprehenderit ipsam et assumenda esse.\"},{\"id\":1,\"title\":\"Natus molestiae vel voluptatem cumque ut.\",\"content\":\"Vel alias quos magnam quisquam hic sit. Quaerat et non sit quas. Magni neque soluta sapiente iusto quod sed. Minus reprehenderit ipsam et assumenda esse.\"}],\"meta\":{\"current_page\":1,\"next_page\":null,\"prev_page\":null,\"total_pages\":1,\"total_count\":2,\"sort\":\"created_at\",\"order\":\"desc\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"306e733bc1d1953babc9be53b978eb83\"",
+        "ETag": "W/\"063237b8ee88b426d9a443c1d6a19f9f\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "89678e2c-821e-4085-bc22-ad2039020adb",
-        "X-Runtime": "0.013620",
-        "Content-Length": "625"
+        "X-Request-Id": "2a3344a3-a01d-46e9-85a2-1503a7159ebf",
+        "X-Runtime": "0.037717",
+        "Content-Length": "578"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
