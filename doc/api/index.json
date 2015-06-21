@@ -34,6 +34,46 @@
           "groups": "all"
         }
       ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Creating a new user with blank params",
+          "link": "users/creating_a_new_user_with_blank_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creating a new user with invalid params",
+          "link": "users/creating_a_new_user_with_invalid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Creating a new user with valid params",
+          "link": "users/creating_a_new_user_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Signing in user with blank params",
+          "link": "users/signing_in_user_with_blank_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Signing in user with improper params",
+          "link": "users/signing_in_user_with_improper_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Signing in user with invalid password",
+          "link": "users/signing_in_user_with_invalid_password.json",
+          "groups": "all"
+        },
+        {
+          "description": "Signing in user with valid email and password",
+          "link": "users/signing_in_user_with_valid_email_and_password.json",
+          "groups": "all"
+        }
+      ]
     }
   ]
 }

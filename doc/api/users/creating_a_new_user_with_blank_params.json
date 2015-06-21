@@ -1,21 +1,21 @@
 {
-  "resource": "Posts",
-  "http_method": "PUT",
-  "route": "/api/posts/:id",
-  "description": "Update a new post with invalid params",
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/api/users",
+  "description": "Creating a new user with blank params",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "scope": "post",
-      "name": "title",
-      "description": "Post Title"
+      "scope": "user",
+      "name": "email",
+      "description": "Email"
     },
     {
       "required": true,
-      "scope": "post",
-      "name": "content",
-      "description": "Post Content(Min 25 chars)"
+      "scope": "user",
+      "name": "password",
+      "description": "Password"
     }
   ],
   "response_fields": [
@@ -23,9 +23,9 @@
   ],
   "requests": [
     {
-      "request_method": "PUT",
-      "request_path": "/api/posts/1",
-      "request_body": "{\"post\":{\"title\":\"\",\"content\":\"\"}}",
+      "request_method": "POST",
+      "request_path": "/api/users",
+      "request_body": "{\"user\":{\"email\":\"\",\"password\":\"\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -37,17 +37,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"errors\":{\"title\":[\"can't be blank\"],\"content\":[\"can't be blank\",\"is too short (minimum is 25 characters)\"]},\"response\":{\"code\":422}}",
+      "response_body": "{\"errors\":{\"email\":[\"can't be blank\"],\"password\":[\"can't be blank\"]},\"response\":{\"code\":422}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"7c8ac7d7a81e80de2f74b51a33b85915\"",
+        "ETag": "W/\"f7013e28846dfb6dd0778f47f7c253e4\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "badb442b-06ec-498a-a294-bea83deaceca",
-        "X-Runtime": "0.023467",
-        "Content-Length": "134"
+        "X-Request-Id": "79ff0968-d7f4-4708-a5cc-b15111014534",
+        "X-Runtime": "0.005107",
+        "Content-Length": "93"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

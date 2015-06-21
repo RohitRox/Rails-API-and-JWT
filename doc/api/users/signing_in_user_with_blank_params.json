@@ -1,20 +1,31 @@
 {
-  "resource": "Posts",
-  "http_method": "DELETE",
-  "route": "/api/posts/:id",
-  "description": "Delete a post",
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/api/users/sign_in",
+  "description": "Signing in user with blank params",
   "explanation": null,
   "parameters": [
-
+    {
+      "required": true,
+      "scope": "user",
+      "name": "email",
+      "description": "Email"
+    },
+    {
+      "required": true,
+      "scope": "user",
+      "name": "password",
+      "description": "Password"
+    }
   ],
   "response_fields": [
 
   ],
   "requests": [
     {
-      "request_method": "DELETE",
-      "request_path": "/api/posts/1",
-      "request_body": null,
+      "request_method": "POST",
+      "request_path": "/api/users/sign_in",
+      "request_body": "{\"user\":{\"email\":\"\",\"password\":\"\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
@@ -26,17 +37,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"response\":{\"code\":204}}",
+      "response_body": "{\"errors\":{\"unauthenticated\":[\"Incomplete credentials\"]},\"response\":{\"code\":401}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ac74fb0159d8224a1689d5eeeb10b55e\"",
+        "ETag": "W/\"5cd379817cdd6a32f8b3d879772a2eea\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "be780fb8-8b3f-4000-8d12-d5bed9de8c18",
-        "X-Runtime": "0.013113",
-        "Content-Length": "25"
+        "X-Request-Id": "eadb8540-e3f5-4a8c-bc42-dad11d5c9acf",
+        "X-Runtime": "0.003747",
+        "Content-Length": "81"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
