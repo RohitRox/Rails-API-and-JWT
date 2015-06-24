@@ -6,8 +6,6 @@ gem 'rails-api'
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'sqlite3'
-
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,6 +33,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'rspec_api_documentation'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -42,4 +41,8 @@ end
 
 group :test do
   gem 'database_cleaner'
+end
+
+group :production do
+  gem 'pg'
 end
