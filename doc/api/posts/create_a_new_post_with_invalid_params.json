@@ -1,21 +1,21 @@
 {
-  "resource": "Users",
+  "resource": "Posts",
   "http_method": "POST",
-  "route": "/api/users/sign_in",
-  "description": "Signing in user with improper params",
+  "route": "api/posts",
+  "description": "Create a new post with invalid params",
   "explanation": null,
   "parameters": [
     {
       "required": true,
-      "scope": "user",
-      "name": "email",
-      "description": "Email"
+      "scope": "post",
+      "name": "title",
+      "description": "Post Title"
     },
     {
       "required": true,
-      "scope": "user",
-      "name": "password",
-      "description": "Password"
+      "scope": "post",
+      "name": "content",
+      "description": "Post Content(Min 25 chars)"
     }
   ],
   "response_fields": [
@@ -24,11 +24,12 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/api/users/sign_in",
-      "request_body": "{\"user\":{\"email\":\"nopes@example\",\"password\":\"password\"}}",
+      "request_path": "api/posts",
+      "request_body": "{\"post\":{\"title\":\"\",\"content\":\"\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM1MTkzMDY4fQ.bCXvHxAVm_6wQXaywbXNr3MNGwgtFUXx-3P5OYyioxo",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -37,17 +38,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"errors\":{\"unauthenticated\":[\"Invalid credentials\"]},\"response\":{\"code\":401}}",
+      "response_body": "{\"errors\":{\"title\":[\"can't be blank\"],\"content\":[\"can't be blank\",\"is too short (minimum is 25 characters)\"]},\"response\":{\"code\":422}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"34a383012d5c725c71f5ab5437bbf877\"",
+        "ETag": "W/\"7c8ac7d7a81e80de2f74b51a33b85915\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7a1ee34c-ccec-4738-b3a3-765de3109368",
-        "X-Runtime": "0.003527",
-        "Content-Length": "78"
+        "X-Request-Id": "eb85d7dd-a959-4017-8d27-27a09dbcbcdc",
+        "X-Runtime": "0.028772",
+        "Content-Length": "134"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -1,4 +1,4 @@
-require 'rails_helper'
+  require 'rails_helper'
 
 RSpec.describe Api::PostsController, type: :controller do
 
@@ -75,7 +75,6 @@ RSpec.describe Api::PostsController, type: :controller do
           "sort"=>"id", "order"=>"asc"
         })
     end
-
   end
 
   describe "GET #show" do
@@ -93,52 +92,62 @@ RSpec.describe Api::PostsController, type: :controller do
 
   describe "POST #create" do
 
-    context "with valid params" do
-      let(:valid_attributes) do
-        {
-          title: "Some title",
-          content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati architecto nostrum pariatur quasi culpa distinctio sit. Corrupti suscipit, quod alias sed voluptatum, error sunt laboriosam nulla libero, tenetur saepe."
-        }
-      end
-      it "creates a new Post" do
-        expect {
-          post :create, { post: valid_attributes, format: :json }
-        }.to change(Post, :count).by(1)
+    context "without unauthenticated user" do
+      it "should return 401 resonse code" do
+        post :create, { post: {}, format: :json }
         json = JSON.parse response.body
-        expect(json["response"]["code"]).to eq(201)
-        expect(json['data']).to be_kind_of(Hash)
-        expect(json["links"]).to be_present
+        expect(json["response"]["code"]).to eq(401)
       end
     end
-
-    context "with invalid params" do
-      context "empty title" do
-        let(:invalid_attributes) do
+    context "with authenticated user" do
+      before{ authenticate }
+      context "with valid params" do
+        let(:valid_attributes) do
           {
-            title: "",
-            content: "Some content"
+            title: "Some title",
+            content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit obcaecati architecto nostrum pariatur quasi culpa distinctio sit. Corrupti suscipit, quod alias sed voluptatum, error sunt laboriosam nulla libero, tenetur saepe."
           }
         end
-        it "returns a proper error message with response code 422" do
-          post :create, { post: invalid_attributes, format: :json }
+        it "creates a new Post" do
+          expect {
+            post :create, { post: valid_attributes, format: :json }
+          }.to change(Post, :count).by(1)
           json = JSON.parse response.body
-          expect(json["response"]["code"]).to eq(422)
-          expect(json["errors"]).to be_present
+          expect(json["response"]["code"]).to eq(201)
+          expect(json['data']).to be_kind_of(Hash)
+          expect(json["links"]).to be_present
         end
       end
-      context "duplicate title" do
-        before { create(:post, title: "title") }
-        let(:invalid_attributes) do
-          {
-            title: "title",
-            content: "Some Content"
-          }
+
+      context "with invalid params" do
+        context "empty title" do
+          let(:invalid_attributes) do
+            {
+              title: "",
+              content: "Some content"
+            }
+          end
+          it "returns a proper error message with response code 422" do
+            post :create, { post: invalid_attributes, format: :json }
+            json = JSON.parse response.body
+            expect(json["response"]["code"]).to eq(422)
+            expect(json["errors"]).to be_present
+          end
         end
-        it "returns a proper error message with response code 422" do
-          post :create, { post: invalid_attributes, format: :json }
-          json = JSON.parse response.body
-          expect(json["response"]["code"]).to eq(422)
-          expect(json["errors"]).to be_present
+        context "duplicate title" do
+          before { create(:post, title: "title") }
+          let(:invalid_attributes) do
+            {
+              title: "title",
+              content: "Some Content"
+            }
+          end
+          it "returns a proper error message with response code 422" do
+            post :create, { post: invalid_attributes, format: :json }
+            json = JSON.parse response.body
+            expect(json["response"]["code"]).to eq(422)
+            expect(json["errors"]).to be_present
+          end
         end
       end
     end
@@ -148,48 +157,71 @@ RSpec.describe Api::PostsController, type: :controller do
 
     let!(:post){ create(:post) }
 
-    context "with valid params" do
-      let(:new_attributes) do
-         {
-          title: "changed title"
-         }
-      end
-
-      it "updates the requested post" do
-        put :update, { id: post.id, post: new_attributes, format: :json }
+    context "without unauthenticated user" do
+      it "should return 401 resonse code" do
+        put :update, { id: post.id, post: {}, format: :json }
         json = JSON.parse response.body
-        expect(json["response"]["code"]).to eq(200)
-        expect(json["errors"]).not_to be_present
-        expect(json['data']).to be_kind_of(Hash)
-        expect(json["links"]).to be_present
+        expect(json["response"]["code"]).to eq(401)
       end
     end
-    context "with invalid params" do
-      let(:invalid_attributes) do
-         {
-          title: ""
-         }
-      end
 
-      it "returns a proper error message with response code 422" do
-        put :update, { id: post.id, post: invalid_attributes, format: :json }
-        json = JSON.parse response.body
-        expect(json["response"]["code"]).to eq(422)
-        expect(json["errors"]).to be_present
+    context "with authenticated user" do
+      before{ authenticate }
+      context "with valid params" do
+        let(:new_attributes) do
+           {
+            title: "changed title"
+           }
+        end
+
+        it "updates the requested post" do
+          put :update, { id: post.id, post: new_attributes, format: :json }
+          json = JSON.parse response.body
+          expect(json["response"]["code"]).to eq(200)
+          expect(json["errors"]).not_to be_present
+          expect(json['data']).to be_kind_of(Hash)
+          expect(json["links"]).to be_present
+        end
+      end
+      context "with invalid params" do
+        let(:invalid_attributes) do
+           {
+            title: ""
+           }
+        end
+
+        it "returns a proper error message with response code 422" do
+          put :update, { id: post.id, post: invalid_attributes, format: :json }
+          json = JSON.parse response.body
+          expect(json["response"]["code"]).to eq(422)
+          expect(json["errors"]).to be_present
+        end
       end
     end
   end
 
   describe "DELETE #destroy" do
     let!(:post){ create(:post) }
-    context "delete is successful" do
-      it "destroys the requested post and returns empty body with response code 204" do
-        expect {
-          delete :destroy, { id: post.id, format: :json }
-        }.to change(Post, :count).by(-1)
+
+    context "without unauthenticated user" do
+      it "should return 401 resonse code" do
+        delete :destroy, { id: post.id, format: :json }
         json = JSON.parse response.body
-        expect(json["response"]["code"]).to eq(204)
-        expect(json["data"]).not_to be_present
+        expect(json["response"]["code"]).to eq(401)
+      end
+    end
+
+    context "with authenticated user" do
+      before{ authenticate }
+      context "delete is successful" do
+        it "destroys the requested post and returns empty body with response code 204" do
+          expect {
+            delete :destroy, { id: post.id, format: :json }
+          }.to change(Post, :count).by(-1)
+          json = JSON.parse response.body
+          expect(json["response"]["code"]).to eq(204)
+          expect(json["data"]).not_to be_present
+        end
       end
     end
   end

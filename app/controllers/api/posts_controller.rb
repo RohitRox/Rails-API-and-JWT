@@ -1,4 +1,5 @@
 class Api::PostsController < Api::BaseController
+  skip_before_filter :authenticate_user_from_token!, only: [:index, :show]
   before_action :set_post, only: [:show, :update, :destroy]
 
   def index

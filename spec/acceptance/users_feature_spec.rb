@@ -22,17 +22,6 @@ resource "Users" do
       end
     end
 
-    context "Blank user params" do
-
-      let(:email) { "" }
-      let(:password) { "" }
-
-      example "Creating a new user with blank params" do
-        do_request
-        status.should == 200
-      end
-    end
-
     context "Invalid user params" do
 
       let(:email) { "email@examplecom" }
@@ -50,27 +39,7 @@ resource "Users" do
     parameter :email, "Email", required: true, scope: :user
     parameter :password, "Password", required: true, scope: :user
 
-    context "Blank username and password" do
-      let(:email) { "" }
-      let(:password) { "" }
-
-      example "Signing in user with blank params" do
-        do_request
-        status.should == 200
-      end
-    end
-
-    context "Improper user email and password" do
-      let(:email) { "nopes@example" }
-      let(:password) { "password" }
-
-      example "Signing in user with improper params" do
-        do_request
-        status.should == 200
-      end
-    end
-
-    context "Invalid password" do
+    context "Invalid username or password" do
       let(:email) { "email@example.com" }
       let(:password) { "password" }
 
@@ -82,7 +51,7 @@ resource "Users" do
         )
       end
 
-      example "Signing in user with invalid password" do
+      example "Signing in user with invalid user or password" do
         do_request
         status.should == 200
       end

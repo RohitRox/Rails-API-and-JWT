@@ -31,6 +31,7 @@ RSpec.describe Api::RegistrationsController, type: :controller do
         expect(json["response"]["code"]).to eq(201)
         expect(json["errors"]).not_to be_present
         expect(json["data"]["email"]).to eq(email)
+        expect(json["data"]["auth_token"]).to be_present
       end
     end
 

@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'rspec_api_documentation/dsl'
+include RspecApiHelpers
 
 resource "Posts" do
 
@@ -34,7 +35,8 @@ resource "Posts" do
       let(:title) { "" }
       let(:content) { "" }
 
-      example "Create a new post with invalid title" do
+      example "Create a new post with invalid params" do
+        set_auth_headers
         do_request
         expect(status).to eq 200
       end
@@ -43,8 +45,8 @@ resource "Posts" do
     context "With valid params" do
       let(:title) { "My Title" }
       let(:content) { "Some long long awesome content." }
-
       example "Create a new post with valid params" do
+        set_auth_headers
         do_request
         expect(status).to eq 200
       end
@@ -64,6 +66,7 @@ resource "Posts" do
       let(:content) { "" }
 
       example "Update a new post with invalid params" do
+        set_auth_headers
         do_request
         expect(status).to eq 200
       end
@@ -74,6 +77,7 @@ resource "Posts" do
       let(:content) { "Some long long awesome content." }
 
       example "Update a post with valid params" do
+        set_auth_headers
         do_request
         expect(status).to eq 200
       end
@@ -85,6 +89,7 @@ resource "Posts" do
     let(:id) { post.id }
 
     example "Delete a post" do
+      set_auth_headers
       do_request
       expect(status).to eq 200
     end

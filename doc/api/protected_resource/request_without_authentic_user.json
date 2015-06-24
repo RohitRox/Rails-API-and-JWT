@@ -1,8 +1,8 @@
 {
-  "resource": "Posts",
+  "resource": "Protected Resource",
   "http_method": "DELETE",
-  "route": "/api/posts/:id",
-  "description": "Delete a post",
+  "route": "api/posts/:id",
+  "description": "Request without authentic user",
   "explanation": null,
   "parameters": [
 
@@ -13,12 +13,11 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/api/posts/1",
+      "request_path": "api/posts/1",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM1MTkzMDY4fQ.bCXvHxAVm_6wQXaywbXNr3MNGwgtFUXx-3P5OYyioxo",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -27,17 +26,17 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"response\":{\"code\":204}}",
+      "response_body": "{\"errors\":{\"unauthorized\":[\"You are not authorized perform this action.\"]},\"response\":{\"code\":401}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ac74fb0159d8224a1689d5eeeb10b55e\"",
+        "ETag": "W/\"3f7b2b789dd37f13a3d27c63ac70daab\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f5c9c75a-c7b6-4ef0-949b-63a91acd3c90",
-        "X-Runtime": "0.007474",
-        "Content-Length": "25"
+        "X-Request-Id": "27a5b27f-41aa-4c3a-b3d3-e4a4f73ba2a1",
+        "X-Runtime": "0.022386",
+        "Content-Length": "99"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

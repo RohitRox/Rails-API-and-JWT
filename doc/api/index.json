@@ -4,8 +4,8 @@
       "name": "Posts",
       "examples": [
         {
-          "description": "Create a new post with invalid title",
-          "link": "posts/create_a_new_post_with_invalid_title.json",
+          "description": "Create a new post with invalid params",
+          "link": "posts/create_a_new_post_with_invalid_params.json",
           "groups": "all"
         },
         {
@@ -36,13 +36,23 @@
       ]
     },
     {
-      "name": "Users",
+      "name": "Protected Resource",
       "examples": [
         {
-          "description": "Creating a new user with blank params",
-          "link": "users/creating_a_new_user_with_blank_params.json",
+          "description": "Request with authentic user",
+          "link": "protected_resource/request_with_authentic_user.json",
           "groups": "all"
         },
+        {
+          "description": "Request without authentic user",
+          "link": "protected_resource/request_without_authentic_user.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
         {
           "description": "Creating a new user with invalid params",
           "link": "users/creating_a_new_user_with_invalid_params.json",
@@ -54,18 +64,8 @@
           "groups": "all"
         },
         {
-          "description": "Signing in user with blank params",
-          "link": "users/signing_in_user_with_blank_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Signing in user with improper params",
-          "link": "users/signing_in_user_with_improper_params.json",
-          "groups": "all"
-        },
-        {
-          "description": "Signing in user with invalid password",
-          "link": "users/signing_in_user_with_invalid_password.json",
+          "description": "Signing in user with invalid user or password",
+          "link": "users/signing_in_user_with_invalid_user_or_password.json",
           "groups": "all"
         },
         {
