@@ -2,7 +2,12 @@ Rails.application.routes.draw do
 
   devise_for :users
   namespace :api, defaults: { format: :json } do
-    resources :posts, except: [:new, :edit]
+    resources :posts, except: [:new, :edit] do
+      member do
+        put :upvote
+        put :downvote
+      end
+    end
     devise_for :users, :controllers => {sessions: 'api/sessions', registrations: 'api/registrations'}
   end
 

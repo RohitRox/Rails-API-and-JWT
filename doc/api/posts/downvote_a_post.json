@@ -1,8 +1,8 @@
 {
-  "resource": "Protected Resource",
-  "http_method": "DELETE",
-  "route": "api/posts/:id",
-  "description": "Request without authentic user",
+  "resource": "Posts",
+  "http_method": "PUT",
+  "route": "/api/posts/:id/downvote",
+  "description": "Downvote a post",
   "explanation": null,
   "parameters": [
 
@@ -12,12 +12,13 @@
   ],
   "requests": [
     {
-      "request_method": "DELETE",
-      "request_path": "api/posts/1",
+      "request_method": "PUT",
+      "request_path": "/api/posts/1/downvote",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3NTM4MTQ5fQ.qdUGCLD6aY_x1v8YE2cfcnwE4XYR34SNfix6N3GdoHc",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -26,18 +27,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"errors\":{\"unauthorized\":[\"You are not authorized perform this action.\"]},\"response\":{\"code\":401}}",
+      "response_body": "{\"data\":{\"id\":1,\"downvotes\":1},\"response\":{\"code\":200}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"3f7b2b789dd37f13a3d27c63ac70daab\"",
+        "ETag": "W/\"eb6a96a41fad0babccc4c0081181b19c\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "5138fe2f-340f-4c3c-8be3-853f126b02d4",
-        "X-Runtime": "0.015617",
+        "X-Request-Id": "95ae2b2b-f205-4e02-84e8-0fc2ce9becb7",
+        "X-Runtime": "0.014875",
         "Vary": "Origin",
-        "Content-Length": "99"
+        "Content-Length": "55"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

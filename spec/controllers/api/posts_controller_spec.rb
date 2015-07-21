@@ -226,4 +226,54 @@ RSpec.describe Api::PostsController, type: :controller do
     end
   end
 
+  describe "PUT #upvote" do
+    let!(:post){ create(:post) }
+
+    context "without unauthenticated user" do
+      it "should return 401 resonse code" do
+        put :upvote, { id: post.id, format: :json }
+        json = JSON.parse response.body
+        expect(json["response"]["code"]).to eq(401)
+      end
+    end
+
+    context "with authenticated user" do
+      before{ authenticate }
+      context "upvote is successful" do
+        it "increments upvotes count and returns record with response code 200" do
+          put :upvote, { id: post.id, format: :json }
+          json = JSON.parse response.body
+          expect(json["response"]["code"]).to eq(200)
+          expect(json["data"]).to be_present
+          expect(json["data"]['upvotes']).to eq(1)
+        end
+      end
+    end
+  end
+
+  describe "PUT #downvote" do
+    let!(:post){ create(:post) }
+
+    context "without unauthenticated user" do
+      it "should return 401 resonse code" do
+        put :downvote, { id: post.id, format: :json }
+        json = JSON.parse response.body
+        expect(json["response"]["code"]).to eq(401)
+      end
+    end
+
+    context "with authenticated user" do
+      before{ authenticate }
+      context "downvote is successful" do
+        it "increments downvotes count and returns record with response code 200" do
+          put :downvote, { id: post.id, format: :json }
+          json = JSON.parse response.body
+          expect(json["response"]["code"]).to eq(200)
+          expect(json["data"]).to be_present
+          expect(json["data"]['downvotes']).to eq(1)
+        end
+      end
+    end
+  end
+
 end

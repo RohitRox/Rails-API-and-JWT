@@ -93,7 +93,28 @@ resource "Posts" do
       do_request
       expect(status).to eq 200
     end
+  end
 
+  put '/api/posts/:id/upvote' do
+    let(:post){ create(:post) }
+    let(:id) { post.id }
+
+    example "Upvote a post" do
+      set_auth_headers
+      do_request
+      expect(status).to eq 200
+    end
+  end
+
+  put '/api/posts/:id/downvote' do
+    let(:post){ create(:post) }
+    let(:id) { post.id }
+
+    example "Downvote a post" do
+      set_auth_headers
+      do_request
+      expect(status).to eq 200
+    end
   end
 
 end

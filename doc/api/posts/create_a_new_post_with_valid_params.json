@@ -29,7 +29,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM1MTkzMDY4fQ.bCXvHxAVm_6wQXaywbXNr3MNGwgtFUXx-3P5OYyioxo",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3NTM4MTQ5fQ.qdUGCLD6aY_x1v8YE2cfcnwE4XYR34SNfix6N3GdoHc",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -38,17 +38,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"id\":1,\"title\":\"My Title\",\"content\":\"Some long long awesome content.\"},\"response\":{\"code\":201},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
+      "response_body": "{\"data\":{\"id\":1,\"title\":\"My Title\",\"content\":\"Some long long awesome content.\",\"upvotes\":0,\"downvotes\":0},\"response\":{\"code\":201},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"691eec56b0faf743df98c78c11330d81\"",
+        "ETag": "W/\"7c94eea31251ee40589633497fd0eded\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "dacf735c-2fb8-4baf-9571-f8df063d2db2",
-        "X-Runtime": "0.008175",
-        "Content-Length": "154"
+        "X-Request-Id": "2d8e82a7-7225-4255-a67b-5d3e67d6c388",
+        "X-Runtime": "0.006448",
+        "Vary": "Origin",
+        "Content-Length": "180"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

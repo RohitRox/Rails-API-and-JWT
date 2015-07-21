@@ -19,6 +19,11 @@
           "groups": "all"
         },
         {
+          "description": "Downvote a post",
+          "link": "posts/downvote_a_post.json",
+          "groups": "all"
+        },
+        {
           "description": "Get posts",
           "link": "posts/get_posts.json",
           "groups": "all"
@@ -31,6 +36,11 @@
         {
           "description": "Update a post with valid params",
           "link": "posts/update_a_post_with_valid_params.json",
+          "groups": "all"
+        },
+        {
+          "description": "Upvote a post",
+          "link": "posts/upvote_a_post.json",
           "groups": "all"
         }
       ]

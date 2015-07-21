@@ -32,6 +32,16 @@ class Api::PostsController < Api::BaseController
     @post.destroy
   end
 
+  def upvote
+    @post = Post.select('id, upvotes').find params[:id]
+    @post.increment!(:upvotes) if @post
+  end
+
+  def downvote
+    @post = Post.select('id, downvotes').find params[:id]
+    @post.increment!(:downvotes) if @post
+  end
+
   private
 
     def set_post
