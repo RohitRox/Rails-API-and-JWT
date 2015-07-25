@@ -26,18 +26,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"first_name\":\"Firstname\",\"last_name\":\"Lastname\",\"gender\":\"Male\",\"avatar_url\":\"/images/avatars/default-avatar.jpg\",\"bio\":\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\\ntempor incididunt ut labore et dolore magna aliqua.\",\"user_id\":1,\"location\":\"Woodside, NY\",\"created_at\":\"2015-07-25T03:05:02.738Z\",\"updated_at\":\"2015-07-25T03:05:02.748Z\"}}",
+      "response_body": "{\"data\":{\"first_name\":\"Firstname\",\"last_name\":\"Lastname\",\"gender\":\"Male\",\"avatar_url\":\"http://lorempixel.com/output/animals-q-c-120-120-8.jpg\",\"bio\":\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\\ntempor incididunt ut labore et dolore magna aliqua.\",\"user_id\":1,\"location\":\"Woodside, NY\",\"created_at\":\"2015-07-25T14:48:41.187Z\",\"updated_at\":\"2015-07-25T14:48:41.195Z\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"82bd7f0780368aaa05892cd24dd50d24\"",
+        "ETag": "W/\"7f93b24685e3360f826ae2e21c6de58e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "43a44446-ad2b-44b0-919b-06bbfca4b09c",
-        "X-Runtime": "0.017835",
+        "X-Request-Id": "274bf076-1456-4695-9251-ffa009e7393e",
+        "X-Runtime": "0.014618",
         "Vary": "Origin",
-        "Content-Length": "376"
+        "Content-Length": "396"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

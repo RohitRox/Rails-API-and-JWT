@@ -27,6 +27,7 @@ resource "Profile" do
     parameter :gender, "Gender", required: false, scope: :profile
     parameter :bio, "Bio", required: false, scope: :profile
     parameter :location, "Location/Address", required: false, scope: :profile
+    parameter :avatar_url, "Avatar/ Profile pic url", required: false, scope: :profile
 
     let(:profile){ create(:profile) }
     let(:user){ create(:user, profile: profile) }
@@ -37,6 +38,7 @@ resource "Profile" do
     let(:gender){ "Male" }
     let(:bio){ "About myself ..." }
     let(:location){ "NYC" }
+    let(:avatar_url){ "http://lorempixel.com/output/animals-q-c-120-120-8.jpg" }
 
     context "Unauthorized" do
       example "Update user profile (by other user)" do

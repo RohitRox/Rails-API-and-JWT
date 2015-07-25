@@ -29,7 +29,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3ODc5OTAyfQ.ZuXrK7NLS8m5xtAHaC2kQSuiUeRRqk4litEzm3NRKvA",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3OTIyMTIxfQ.LEdC8r36FqUHqz9fRSeG65aCmoDaZtKPfpWWg_T_hPc",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -46,8 +46,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"7c94eea31251ee40589633497fd0eded\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b07e444b-dc08-444e-9b4b-e1e18d73b85e",
-        "X-Runtime": "0.005028",
+        "X-Request-Id": "a4af8be9-230a-4628-aa68-c55ea5ccc490",
+        "X-Runtime": "0.005174",
         "Vary": "Origin",
         "Content-Length": "180"
       },

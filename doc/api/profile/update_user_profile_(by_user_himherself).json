@@ -34,6 +34,12 @@
       "scope": "profile",
       "name": "location",
       "description": "Location/Address"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "avatar_url",
+      "description": "Avatar/ Profile pic url"
     }
   ],
   "response_fields": [
@@ -43,11 +49,11 @@
     {
       "request_method": "PUT",
       "request_path": "/api/users/1/profile",
-      "request_body": "{\"profile\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"bio\":\"About myself ...\",\"location\":\"NYC\"}}",
+      "request_body": "{\"profile\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"bio\":\"About myself ...\",\"location\":\"NYC\",\"avatar_url\":\"http://lorempixel.com/output/animals-q-c-120-120-8.jpg\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZ3VzQGZlaWwuY2EiLCJleHAiOjE0Mzc4Nzk5MDJ9.5VObU-m-YDuX9DGJ7FsRV_utGn5kXiE2u4EN-D1WYcs",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiaGVhdmVuQHBhcmtlcmtsZWluLnVzIiwiZXhwIjoxNDM3OTIyMTIxfQ.NyocpfkGoMp4PKjx0Fmz5MhvXmVrjaqKiy8QpDIlGMg",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -56,18 +62,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"avatar_url\":\"/images/avatars/default-avatar.jpg\",\"bio\":\"About myself ...\",\"user_id\":1,\"location\":\"NYC\",\"created_at\":\"2015-07-25T03:05:02.794Z\",\"updated_at\":\"2015-07-25T03:05:02.807Z\"}}",
+      "response_body": "{\"data\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"avatar_url\":\"http://lorempixel.com/output/animals-q-c-120-120-8.jpg\",\"bio\":\"About myself ...\",\"user_id\":1,\"location\":\"NYC\",\"created_at\":\"2015-07-25T14:48:41.243Z\",\"updated_at\":\"2015-07-25T14:48:41.256Z\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"fff60685f803220dcd491094bfbb7105\"",
+        "ETag": "W/\"5f0a26f583733ca8e46c435869bb51a2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bc4f722e-5ed4-46fb-a916-4a192821f0fb",
-        "X-Runtime": "0.016228",
+        "X-Request-Id": "72c66deb-c42c-4aa4-a4ce-8870632efc3d",
+        "X-Runtime": "0.014848",
         "Vary": "Origin",
-        "Content-Length": "251"
+        "Content-Length": "271"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

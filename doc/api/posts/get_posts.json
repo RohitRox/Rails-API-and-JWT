@@ -53,18 +53,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":[{\"id\":2,\"title\":\"Beatae ut distinctio est repudiandae.\",\"content\":\"Eius est voluptatem officia veritatis fugit. Placeat accusantium corporis aperiam vel odio. Tempora et quo repudiandae et qui voluptas quae. Et blanditiis praesentium similique et consequuntur soluta.\",\"upvotes\":0,\"downvotes\":0},{\"id\":1,\"title\":\"Est accusamus velit ut dolor perspiciatis aut.\",\"content\":\"Eius est voluptatem officia veritatis fugit. Placeat accusantium corporis aperiam vel odio. Tempora et quo repudiandae et qui voluptas quae. Et blanditiis praesentium similique et consequuntur soluta.\",\"upvotes\":0,\"downvotes\":0}],\"meta\":{\"current_page\":1,\"next_page\":null,\"prev_page\":null,\"total_pages\":1,\"total_count\":2,\"sort\":\"created_at\",\"order\":\"desc\"}}",
+      "response_body": "{\"data\":[{\"id\":2,\"title\":\"Sit reiciendis sed delectus eveniet omnis.\",\"content\":\"Ipsum et eum ab non atque velit et. Suscipit officia eligendi et magnam nemo voluptatem sequi nostrum. Hic quam sit cupiditate reiciendis ipsam ex alias nobis. Quos libero dolore minus excepturi et sint occaecati sequi.\",\"upvotes\":0,\"downvotes\":0},{\"id\":1,\"title\":\"Deleniti dolores optio est ipsam praesentium vitae.\",\"content\":\"Ipsum et eum ab non atque velit et. Suscipit officia eligendi et magnam nemo voluptatem sequi nostrum. Hic quam sit cupiditate reiciendis ipsam ex alias nobis. Quos libero dolore minus excepturi et sint occaecati sequi.\",\"upvotes\":0,\"downvotes\":0}],\"meta\":{\"current_page\":1,\"next_page\":null,\"prev_page\":null,\"total_pages\":1,\"total_count\":2,\"sort\":\"created_at\",\"order\":\"desc\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"266bbb88154ac328c6942aa26546dbde\"",
+        "ETag": "W/\"b94202ecf04f3652dcc9ed7836ccc662\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "0f82167f-1007-43d5-891b-6cfbc492a1f9",
-        "X-Runtime": "0.016052",
+        "X-Request-Id": "092099af-b006-440f-b78c-5c6087302145",
+        "X-Runtime": "0.014152",
         "Vary": "Origin",
-        "Content-Length": "738"
+        "Content-Length": "786"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

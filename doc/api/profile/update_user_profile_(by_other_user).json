@@ -34,6 +34,12 @@
       "scope": "profile",
       "name": "location",
       "description": "Location/Address"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "avatar_url",
+      "description": "Avatar/ Profile pic url"
     }
   ],
   "response_fields": [
@@ -43,11 +49,11 @@
     {
       "request_method": "PUT",
       "request_path": "/api/users/2/profile",
-      "request_body": "{\"profile\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"bio\":\"About myself ...\",\"location\":\"NYC\"}}",
+      "request_body": "{\"profile\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"bio\":\"About myself ...\",\"location\":\"NYC\",\"avatar_url\":\"http://lorempixel.com/output/animals-q-c-120-120-8.jpg\"}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3ODc5OTAyfQ.ZuXrK7NLS8m5xtAHaC2kQSuiUeRRqk4litEzm3NRKvA",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3OTIyMTIxfQ.LEdC8r36FqUHqz9fRSeG65aCmoDaZtKPfpWWg_T_hPc",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -64,8 +70,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "W/\"3f7b2b789dd37f13a3d27c63ac70daab\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "33099b1e-3b97-4ac9-afd2-1ca194de1a12",
-        "X-Runtime": "0.002246",
+        "X-Request-Id": "c8d62701-7d3a-4e3a-b2da-91ca3ee0f33f",
+        "X-Runtime": "0.003221",
         "Vary": "Origin",
         "Content-Length": "99"
       },

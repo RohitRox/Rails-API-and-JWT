@@ -26,18 +26,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"id\":1,\"title\":\"Exercitationem aut aperiam vitae debitis quia.\",\"content\":\"Eius est voluptatem officia veritatis fugit. Placeat accusantium corporis aperiam vel odio. Tempora et quo repudiandae et qui voluptas quae. Et blanditiis praesentium similique et consequuntur soluta.\",\"upvotes\":0,\"downvotes\":0},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
+      "response_body": "{\"data\":{\"id\":1,\"title\":\"Tempore sit architecto ut quaerat qui.\",\"content\":\"Ipsum et eum ab non atque velit et. Suscipit officia eligendi et magnam nemo voluptatem sequi nostrum. Hic quam sit cupiditate reiciendis ipsam ex alias nobis. Quos libero dolore minus excepturi et sint occaecati sequi.\",\"upvotes\":0,\"downvotes\":0},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"99d5dc9b86d520e825a2b77371836f20\"",
+        "ETag": "W/\"9d952c092184647854f3d66ca555f501\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3b2b5d44-cbfd-4ac3-8a82-3d8d5ad4f810",
-        "X-Runtime": "0.012298",
+        "X-Request-Id": "602343cf-0e8a-4175-9e1d-afabf2bd49a4",
+        "X-Runtime": "0.012311",
         "Vary": "Origin",
-        "Content-Length": "363"
+        "Content-Length": "374"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
