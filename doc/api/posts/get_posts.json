@@ -53,18 +53,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":[{\"id\":2,\"title\":\"Dignissimos sit in nihil voluptatum cum omnis neque.\",\"content\":\"Eius iste tenetur repellendus fugit. Quos suscipit et ea occaecati impedit et. Voluptas et id sint consequatur dolorem distinctio enim. Similique non et et in nesciunt nostrum. Aut repellat rerum aliquid recusandae ea velit.\",\"upvotes\":0,\"downvotes\":0},{\"id\":1,\"title\":\"Vel nihil modi sunt tempore.\",\"content\":\"Eius iste tenetur repellendus fugit. Quos suscipit et ea occaecati impedit et. Voluptas et id sint consequatur dolorem distinctio enim. Similique non et et in nesciunt nostrum. Aut repellat rerum aliquid recusandae ea velit.\",\"upvotes\":0,\"downvotes\":0}],\"meta\":{\"current_page\":1,\"next_page\":null,\"prev_page\":null,\"total_pages\":1,\"total_count\":2,\"sort\":\"created_at\",\"order\":\"desc\"}}",
+      "response_body": "{\"data\":[{\"id\":2,\"title\":\"Beatae corporis dolor praesentium molestiae itaque rerum.\",\"content\":\"Eum beatae corporis aut maiores et dolore. Occaecati tenetur et quod quo. Veritatis nihil eum expedita labore earum odit.\",\"upvotes\":0,\"downvotes\":0},{\"id\":1,\"title\":\"Nulla et qui explicabo ipsam consequuntur et velit quo.\",\"content\":\"Eum beatae corporis aut maiores et dolore. Occaecati tenetur et quod quo. Veritatis nihil eum expedita labore earum odit.\",\"upvotes\":0,\"downvotes\":0}],\"meta\":{\"current_page\":1,\"next_page\":null,\"prev_page\":null,\"total_pages\":1,\"total_count\":2,\"sort\":\"created_at\",\"order\":\"desc\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"8bf360c5639ebe71bb18014a6b35a259\"",
+        "ETag": "W/\"590a0112e0d4c86be616852bf133087e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "d3c198e4-ba89-4b62-95b2-6b2cd0c6a8db",
-        "X-Runtime": "0.018477",
+        "X-Request-Id": "384d382c-f087-4dbe-912f-8b3d247db0e5",
+        "X-Runtime": "0.015737",
         "Vary": "Origin",
-        "Content-Length": "783"
+        "Content-Length": "609"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

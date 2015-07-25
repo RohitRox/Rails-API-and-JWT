@@ -1,8 +1,8 @@
 {
-  "resource": "Protected Resource",
-  "http_method": "DELETE",
-  "route": "api/posts/:id",
-  "description": "Request with authentic user",
+  "resource": "Profile",
+  "http_method": "GET",
+  "route": "/api/users/:id/profile",
+  "description": "Get user profile",
   "explanation": null,
   "parameters": [
 
@@ -12,13 +12,12 @@
   ],
   "requests": [
     {
-      "request_method": "DELETE",
-      "request_path": "api/posts/1",
+      "request_method": "GET",
+      "request_path": "/api/users/1/profile",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3ODc5NjgzfQ.Ezjr-VHQy7C8Uh2KDEONlI2cF98fGcdwjZeXeEHWAg4",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -27,18 +26,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"response\":{\"code\":204}}",
+      "response_body": "{\"data\":{\"first_name\":\"Firstname\",\"last_name\":\"Lastname\",\"gender\":\"Male\",\"avatar_url\":\"/images/avatars/default-avatar.jpg\",\"bio\":\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\\ntempor incididunt ut labore et dolore magna aliqua.\",\"user_id\":1,\"location\":\"Woodside, NY\",\"created_at\":\"2015-07-25T03:01:23.569Z\",\"updated_at\":\"2015-07-25T03:01:23.578Z\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"ac74fb0159d8224a1689d5eeeb10b55e\"",
+        "ETag": "W/\"4331cf87f6931a1be08a0408ae228dfe\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "e343c869-f400-45b7-a305-8decf5b76315",
-        "X-Runtime": "0.027227",
+        "X-Request-Id": "e0bc8a8a-1b84-47ac-ba04-840afbda705a",
+        "X-Runtime": "0.018254",
         "Vary": "Origin",
-        "Content-Length": "25"
+        "Content-Length": "376"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

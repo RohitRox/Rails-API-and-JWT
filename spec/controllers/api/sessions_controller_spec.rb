@@ -35,6 +35,8 @@ RSpec.describe Api::SessionsController, type: :controller do
         expect(json["errors"]).not_to be_present
         expect(json["data"]["email"]).to eq(email)
         expect(json["data"]["auth_token"]).to be_present
+        binding.pry
+        expect(json["data"]["profile"]).to be_present
       end
     end
 

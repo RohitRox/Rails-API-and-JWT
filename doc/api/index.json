@@ -46,6 +46,26 @@
       ]
     },
     {
+      "name": "Profile",
+      "examples": [
+        {
+          "description": "Get user profile",
+          "link": "profile/get_user_profile.json",
+          "groups": "all"
+        },
+        {
+          "description": "Update user profile (by other user)",
+          "link": "profile/update_user_profile_(by_other_user).json",
+          "groups": "all"
+        },
+        {
+          "description": "Update user profile (by user him/herself)",
+          "link": "profile/update_user_profile_(by_user_himherself).json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Protected Resource",
       "examples": [
         {

@@ -37,18 +37,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"email\":\"email@example.com\",\"auth_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZW1haWxAZXhhbXBsZS5jb20iLCJleHAiOjE0Mzc1MzgxNDl9.SiuNXxXff1db1FOlaIHvBnbn6C08E7SfYTkArxpfhEY\"},\"response\":{\"code\":201}}",
+      "response_body": "{\"data\":{\"email\":\"email@example.com\",\"auth_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZW1haWxAZXhhbXBsZS5jb20iLCJleHAiOjE0Mzc4Nzk2ODN9.VlhR4bOkPiM521EtHSUEZbC1dFf-wmhMqLmsKYU_aLk\",\"id\":1,\"profile\":{\"first_name\":null,\"last_name\":null,\"gender\":null,\"avatar_url\":\"http://lorempixel.com/output/food-q-c-120-120-9.jpg\",\"bio\":null,\"user_id\":1,\"location\":null,\"created_at\":\"2015-07-25T03:01:23.669Z\",\"updated_at\":\"2015-07-25T03:01:23.669Z\"}},\"response\":{\"code\":201}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"47e5d1c4b3f0865ea34da47feea13a99\"",
+        "ETag": "W/\"8296bade9e8358d1c16891c6f9567692\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bfb798f0-7893-4983-bc90-7da028bdda4a",
-        "X-Runtime": "0.022041",
+        "X-Request-Id": "8acd4eaa-fbea-4e8a-8bbb-80226225da26",
+        "X-Runtime": "0.024232",
         "Vary": "Origin",
-        "Content-Length": "219"
+        "Content-Length": "473"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -11,11 +11,13 @@ RSpec.describe Api::RegistrationsController, type: :controller do
       }
     end
 
+    subject{ post :create, { user: user_params, format: :json } }
+
     context "with invalid email and password" do
       let(:email){ "bad@email" }
       let(:password){ "pass" }
       it "returns proper error message with response code 422" do
-        post :create, { user: user_params, format: :json }
+        subject
         json = JSON.parse response.body
         expect(json["response"]["code"]).to eq(422)
         expect(json["errors"]).to be_present
@@ -26,12 +28,14 @@ RSpec.describe Api::RegistrationsController, type: :controller do
       let(:email){ "good@email.com" }
       let(:password){ "password" }
       it "returns user json with response code 201" do
-        post :create, { user: user_params, format: :json }
+        subject
         json = JSON.parse response.body
         expect(json["response"]["code"]).to eq(201)
         expect(json["errors"]).not_to be_present
         expect(json["data"]["email"]).to eq(email)
         expect(json["data"]["auth_token"]).to be_present
+        expect(json["data"]["profile"]).to be_present
+        binding.pry
       end
     end
 

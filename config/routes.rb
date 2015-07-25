@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       end
     end
     devise_for :users, :controllers => {sessions: 'api/sessions', registrations: 'api/registrations'}
+    resources :users, only: [:update, :destroy] do
+      resource :profile
+    end
   end
 
   mount Raddocs::App => "/api/docs"

@@ -1,0 +1,76 @@
+{
+  "resource": "Profile",
+  "http_method": "PUT",
+  "route": "/api/users/:id/profile",
+  "description": "Update user profile (by other user)",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "first_name",
+      "description": "First Name"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "last_name",
+      "description": "Last Name"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "gender",
+      "description": "Gender"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "bio",
+      "description": "Bio"
+    },
+    {
+      "required": false,
+      "scope": "profile",
+      "name": "location",
+      "description": "Location/Address"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/api/users/2/profile",
+      "request_body": "{\"profile\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"bio\":\"About myself ...\",\"location\":\"NYC\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3ODc5NjgzfQ.Ezjr-VHQy7C8Uh2KDEONlI2cF98fGcdwjZeXeEHWAg4",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"errors\":{\"unauthorized\":[\"You are not authorized perform this action.\"]},\"response\":{\"code\":401}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"3f7b2b789dd37f13a3d27c63ac70daab\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8466b7b7-3649-4e42-81b3-d3561a467f9b",
+        "X-Runtime": "0.004440",
+        "Vary": "Origin",
+        "Content-Length": "99"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

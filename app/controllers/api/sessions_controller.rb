@@ -9,7 +9,7 @@ class Api::SessionsController < Api::BaseController
     @auth_token = jwt_token(@user)
   end
 
-  protected
+  private
 
   def user_params
     params.require(:user).permit(:email, :password)
