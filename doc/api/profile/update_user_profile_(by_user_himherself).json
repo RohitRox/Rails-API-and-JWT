@@ -47,7 +47,7 @@
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoibWF1cmljaW9fa2xvY2tvQGxhcnNvbi5jby51ayIsImV4cCI6MTQzNzg3OTY4M30.iGOAjMEh9k8sn5L-C1mY9_Bnv7i4J4AGWoiI2CAN5LQ",
+        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiZ3VzQGZlaWwuY2EiLCJleHAiOjE0Mzc4Nzk5MDJ9.5VObU-m-YDuX9DGJ7FsRV_utGn5kXiE2u4EN-D1WYcs",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -56,16 +56,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"avatar_url\":\"/images/avatars/default-avatar.jpg\",\"bio\":\"About myself ...\",\"user_id\":1,\"location\":\"NYC\",\"created_at\":\"2015-07-25T03:01:23.628Z\",\"updated_at\":\"2015-07-25T03:01:23.641Z\"}}",
+      "response_body": "{\"data\":{\"first_name\":\"Roxxy\",\"last_name\":\"Poxxy\",\"gender\":\"Male\",\"avatar_url\":\"/images/avatars/default-avatar.jpg\",\"bio\":\"About myself ...\",\"user_id\":1,\"location\":\"NYC\",\"created_at\":\"2015-07-25T03:05:02.794Z\",\"updated_at\":\"2015-07-25T03:05:02.807Z\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"d051f22253c9eb97a713dd825e7152ba\"",
+        "ETag": "W/\"fff60685f803220dcd491094bfbb7105\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "f7018f61-4c5d-4217-9337-fd8c3d67657c",
-        "X-Runtime": "0.017084",
+        "X-Request-Id": "bc4f722e-5ed4-46fb-a916-4a192821f0fb",
+        "X-Runtime": "0.016228",
         "Vary": "Origin",
         "Content-Length": "251"
       },

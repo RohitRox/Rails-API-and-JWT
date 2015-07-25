@@ -26,6 +26,15 @@ resource "Posts" do
     end
   end
 
+  get 'api/posts/:id' do
+    let(:post){ create(:post) }
+    let(:id){ post.id }
+    example "Get post" do
+      do_request
+      expect(status).to eq 200
+    end
+  end
+
   post "api/posts" do
     parameter :title, "Post Title", required: true, scope: :post
     parameter :content, "Post Content(Min 25 chars)", required: true, scope: :post

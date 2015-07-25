@@ -24,6 +24,11 @@
           "groups": "all"
         },
         {
+          "description": "Get post",
+          "link": "posts/get_post.json",
+          "groups": "all"
+        },
+        {
           "description": "Get posts",
           "link": "posts/get_posts.json",
           "groups": "all"

@@ -1,8 +1,8 @@
 {
   "resource": "Posts",
-  "http_method": "PUT",
-  "route": "/api/posts/:id/downvote",
-  "description": "Downvote a post",
+  "http_method": "GET",
+  "route": "api/posts/:id",
+  "description": "Get post",
   "explanation": null,
   "parameters": [
 
@@ -12,13 +12,12 @@
   ],
   "requests": [
     {
-      "request_method": "PUT",
-      "request_path": "/api/posts/1/downvote",
+      "request_method": "GET",
+      "request_path": "api/posts/1",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": "AUTH-BASIC eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoidGVzdCt1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNDM3ODc5OTAyfQ.ZuXrK7NLS8m5xtAHaC2kQSuiUeRRqk4litEzm3NRKvA",
         "Host": "example.org",
         "Cookie": ""
       },
@@ -27,18 +26,18 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"data\":{\"id\":1,\"downvotes\":1},\"response\":{\"code\":200}}",
+      "response_body": "{\"data\":{\"id\":1,\"title\":\"Exercitationem aut aperiam vitae debitis quia.\",\"content\":\"Eius est voluptatem officia veritatis fugit. Placeat accusantium corporis aperiam vel odio. Tempora et quo repudiandae et qui voluptas quae. Et blanditiis praesentium similique et consequuntur soluta.\",\"upvotes\":0,\"downvotes\":0},\"links\":{\"self\":\"http://example.org/api/posts/1\"}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"eb6a96a41fad0babccc4c0081181b19c\"",
+        "ETag": "W/\"99d5dc9b86d520e825a2b77371836f20\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "860e7fb3-ae2b-4437-be09-2541df2c20cf",
-        "X-Runtime": "0.016649",
+        "X-Request-Id": "3b2b5d44-cbfd-4ac3-8a82-3d8d5ad4f810",
+        "X-Runtime": "0.012298",
         "Vary": "Origin",
-        "Content-Length": "55"
+        "Content-Length": "363"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
